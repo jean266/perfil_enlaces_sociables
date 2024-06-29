@@ -1,2 +1,88 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
+
+.container_main {
+    width: 90%;
+    background-color: v.$darkGrey;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 10rem auto;
+    
+    @include m.tablet {
+        width: 30rem;
+        margin: 10rem auto;
+    }
+
+    p, a {
+        font-size: 1.2rem;
+        
+        @include m.tablet {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.profile {
+    margin-bottom: 2rem;
+
+    .profile_imagen {
+        margin-bottom: 2rem;
+
+        img {
+            border-radius: 50%;
+            width: 8rem;
+            margin: 0 auto;
+        }
+    }
+
+    .profile_name {
+        font-weight: 600;
+        font-size: 2rem;
+
+        @include m.tablet {
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+        }
+    }
+    
+    .profile_location {
+        text-align: center;
+        color: v.$green;
+        font-weight: 700;
+        margin-bottom: 2.5rem;
+    }
+
+    .profile_description {
+        text-align: center;
+        font-weight: 400;
+    }
+}
+
+.links {
+    .link {
+        background: v.$grey;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        border-radius: .6rem;
+        text-align: center;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            background-color: v.$green;
+            cursor: pointer;
+
+            a {
+                color: v.$black;
+            }
+        }
+        
+        a {
+            font-size: 1.3rem;
+            color: v.$white;
+            font-weight: 700;
+        }
+    }
+}
